@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    
+  },
+  "navigationBarBackgroundColor": "#ffffff",
+  "navigationBarTextStyle": "black",
+  "navigationBarTitleText": "人工服务",
+  "backgroundColor": "#eeeeee",
+  "backgroundTextStyle": "light"
+}

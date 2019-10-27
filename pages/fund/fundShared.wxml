@@ -1,0 +1,220 @@
+<!--pages/fund/fundDetail.wxml-->
+<wxs module="wxmlFromat" src="../../utils/common.wxs"></wxs>
+<view class='container'>
+
+  <view class='list_header flex-mc' style='background-image:url("{{order.cover_url}}")'>
+    <view class='title'>{{order.title}}</view>
+  </view>
+
+  <view class='section_card'>
+    <view class='flex-between'>
+      <view class='flex1'>
+        <image src='{{order.header_img}}'></image>
+      </view>
+      <view class='flex3 flex-ms'>
+        <view class='title'>{{order.user_name}}的众筹</view>
+        <view class='subtitle'>剩余
+          <span>{{resetTime}}</span>天</view>
+      </view>
+      <view class='flex2'>
+        <view class='time'>{{wxmlFromat.getSubString(order.create_time,0,11)}}发起</view>
+      </view>
+
+    </view>
+  </view>
+
+
+  <view class='detail_data flex-around'>
+     <view class='flex1'>
+      <view class='num'>{{order.total_amount}}</view>
+      <view>
+        目标金额（元）
+      </view>
+    </view>
+    <view class='flex1'>
+      <view class='num'>{{order.paid_amount}}</view>
+      <view>
+        已筹金额（元）
+      </view>
+    </view>
+    <view class='flex1'>
+      <view class='num'>{{wxmlFromat.getFixedNumber((order.total_amount - order.paid_amount),2)}}</view>
+      <view>
+        还需金额（元）
+      </view>
+    </view>
+  </view>
+
+  <view class='fund_progress_wrap'>
+    <i-progress status="wrong" percent="{{wxmlFromat.getFixedNumber((order.paid_amount/order.total_amount*100),2)}}"></i-progress>
+  </view>
+
+  <view class='section_card'>
+    <view class='flex-between'>
+      <view class='title'>本次赛事由【{{order.sponsor}}】举办</view>
+      <view class='subtitle'></view>
+    </view>
+  </view>
+
+
+  <view class='active_card flex-start'>
+    <view class='flex1'>
+      <image src='{{order.cover_url}}'></image>
+    </view>
+    <view class='flex3 card_content'>
+      <view class='flex3 title'>{{order.title}}</view>
+      <view class='flex1 price'>￥{{order.total_amount}}</view>
+      <view class='flex1 subtitle'>进行中</view>
+    </view>
+  </view>
+
+  <view class='group_card'>
+    <view class='group_name'>所属队伍：{{order.team_title}}({{order.team_users.length}}人)</view>
+    <view class='group_icons'>
+      <image wx:for="{{order.team_users}}" wx:key="key" wx:for-item="user" src='{{user.header_img}}'></image>
+    </view>
+  </view>
+
+  <view class='range_list'>
+    <i-tabs current="{{ current }}" class="jx_tabs" bindchange="handleChange">
+      <i-tab key="tab1" title="速度榜"></i-tab>
+      <i-tab key="tab2" title="人气榜"></i-tab>
+      <i-tab key="tab3" title="财富榜"></i-tab>
+    </i-tabs>
+
+    <view wx:if="{{current == 'tab1'}}">
+      <view class='list'>
+        <view class='list_item flex-start'>
+          <view class='flex2'>
+            <image src='{{my_rank.header_img}}'></image>
+          </view>
+          <view class='flex3'>
+            <view>{{my_rank.name}}</view>
+            <view class='comment'>{{my_rank.num}}</view>
+          </view>
+          <view class='flex1 counts'>
+            <!-- 8分钟 -->
+          </view>
+        </view>
+
+        <view class='list_item flex-start' wx:for="{{rangeList1}}" wx:key="key" wx:for-index="index">
+          <view class='flex2'>
+            <i-icon type="integral_fill" size="28" color="{{wxmlFromat.getRangeColor(index)}}" />
+            <image src='{{item.header_img}}'></image>
+          </view>
+          <view class='flex3'>
+            <view>{{item.name}}</view>
+          </view>
+          <view class='flex1 counts'>
+            {{item.count}}
+          </view>
+        </view>
+
+      </view>
+    </view>
+
+    <view wx:if="{{current == 'tab2'}}">
+      <view class='list'>
+        <view class='list_item flex-start'>
+          <view class='flex2'>
+            <image src='{{my_rank.header_img}}'></image>
+          </view>
+          <view class='flex3'>
+            <view>{{my_rank.name}}</view>
+            <view class='comment'>{{my_rank.num}}</view>
+          </view>
+          <view class='flex1 counts'>
+            <!-- 8分钟 -->
+          </view>
+        </view>
+
+        <view class='list_item flex-start' wx:for="{{rangeList2}}" wx:key="key" wx:for-index="index">
+          <view class='flex2'>
+            <i-icon type="integral_fill" size="28" color="{{wxmlFromat.getRangeColor(index)}}" />
+            <image src='{{item.header_img}}'></image>
+          </view>
+          <view class='flex3'>
+            <view>{{item.name}}</view>
+          </view>
+          <view class='flex1 counts'>
+            {{item.count}}
+          </view>
+        </view>
+
+      </view>
+    </view>
+
+    <view wx:if="{{current == 'tab3'}}">
+      <view class='list'>
+        <view class='list_item flex-start'>
+          <view class='flex2'>
+            <image src='{{my_rank.header_img}}'></image>
+          </view>
+          <view class='flex3'>
+            <view>{{my_rank.name}}</view>
+            <view class='comment'>{{my_rank.num}}</view>
+          </view>
+          <view class='flex1 counts'>
+            <!-- 8分钟 -->
+          </view>
+        </view>
+
+        <view class='list_item flex-start' wx:for="{{rangeList3}}" wx:key="key" wx:for-index="index">
+          <view class='flex2'>
+            <i-icon type="integral_fill" size="28" color="{{wxmlFromat.getRangeColor(index)}}" />
+            <image src='{{item.header_img}}'></image>
+          </view>
+          <view class='flex3'>
+            <view>{{item.name}}</view>
+          </view>
+          <view class='flex1 counts'>
+            {{item.count}}
+          </view>
+        </view>
+
+      </view>
+    </view>
+  </view>
+  <view class='checkMore' data-url='/pages/index/rangeLists?activity_id={{order.activity_id}}' catchtap='navTo'>查看榜单更多</view>
+
+  <view class='section_card' style='margin-bottom:2rpx;'>
+    <view class='flex-between'>
+      <view class='title'>支持人数（{{supportList.length}}）</view>
+      <view class='subtitle' data-url='/pages/index/supportList?order_sn={{order.order_sn}}' catchtap='navTo'>
+        查看全部
+        <i-icon type="enter" size="14" color="#80848f" style='float:right;' />
+      </view>
+    </view>
+  </view>
+  <view class='support_list'>
+    <view class='list_item flex-start' wx:for="{{supportList}}" wx:key="key">
+      <view class='flex1'>
+        <image src='{{item.header_img}}'></image>
+      </view>
+      <view class='flex3'>
+        <view>{{item.name}}</view>
+        <view class='comment'>{{item.text}}</view>
+      </view>
+      <view class='flex1 counts'>
+        <!-- <i-icon type="browse" size="20" color="#80848f" />
+        <i-icon type="message" size="20" color="#80848f" /> -->
+      </view>
+    </view>
+  </view>
+
+<view class="home" data-url='/pages/index/index' catchtap='swithchTo'>
+   <image src='/images/home.png'></image>
+</view>
+
+  <view class="actions  flex-start">
+    <view class='flex1'>
+      <button class='button1' data-url='/pages/index/matchDetail?id={{order.activity_id}}' catchtap='navTo'>我要同行</button>
+    </view>
+    <view class='flex1'>
+      <button class='button2' data-url='/pages/index/supportHe?order_sn={{order.order_sn}}' catchtap='navTo'>给TA支持</button>
+    </view>
+    <view class='flex1'>
+      <button  open-type="share">分享出去</button>
+    </view>
+  </view>
+</view>

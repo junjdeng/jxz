@@ -1,0 +1,7 @@
+/* pages/mine/phone.wxss */
+page{background: #f5f5f5;}
+.phone_card{background: #fff; width: 670rpx; margin: 20rpx; padding: 20rpx; border-radius: 8rpx; font-size: 32rpx;  line-height: 60rpx;color:#302C3D;}
+.phone_card span{ font: 24rpx; line-height: 60rpx; float: right; }
+
+.actions{width: 670rpx;  position: fixed; bottom: 40rpx;}
+.actions button{background: #00B9FF; color:#fff;}

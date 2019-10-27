@@ -1,0 +1,7 @@
+/* pages/index/teamactivite.wxss */
+page{background: #f5f5f5;}
+.header{padding: 20rpx; width: 670rpx; background: #fff; margin: 20rpx 20rpx 10rpx 20rpx;}
+.header .title{color: #302C3D; font-size: 36rpx; line-height: 50rpx; margin-bottom: 20rpx;}
+.header .time{color:#979797;font-size: 20rpx;  line-height: 60rpx;}
+.header .time span{color:#63678D;font-size: 24rpx;  line-height: 60rpx; padding-right: 1em;}
+.content{padding: 20rpx; width: 670rpx; background: #fff; margin:0 20rpx; min-height: 800rpx; overflow: hidden;}

@@ -1,0 +1,57 @@
+<!--pages/index/holdapply.wxml-->
+<view class='container'>
+  <form class='apply_form' bindsubmit="formSubmit">
+    <view class='form_item flex-start'>
+      <view class='flex1 item_title'>
+        <span>*</span>姓名
+      </view>
+      <view class='flex2'>
+        <input placeholder-style="color:#979797; font-size:14px;" name="name" value="{{register.name}}" placeholder='请填写与身份证一致的姓名'></input>
+      </view>
+    </view>
+    <view class='form_item flex-start'>
+      <view class='flex1 item_title'>
+        <span>*</span>手机号
+      </view>
+      <view class='flex2'>
+        <input placeholder-style="color:#979797; font-size:14px;" name="phone" value="{{register.phone}}" placeholder='请填写您的手机号'></input>
+      </view>
+    </view>
+    <view class='form_item flex-start'>
+      <view class='flex1 item_title'>
+        <span>*</span>身份证
+      </view>
+      <view class='flex2'>
+        <input placeholder-style="color:#979797; font-size:14px;" name="id_card" value="{{register.id_card}}" placeholder='请输入您的身份证号码'></input>
+      </view>
+    </view>
+    <view class='form_item flex-start'>
+      <view class='flex1 item_title'>
+        <span>*</span>联系地址
+      </view>
+      <view class='flex2'>
+        <input placeholder-style="color:#979797; font-size:14px;" name="address" value="{{register.address}}" placeholder='请输入地址'></input>
+      </view>
+    </view>
+    <view class='form_item flex-start' style='margin-top:40rpx;'>
+      <view class='flex1 item_title'>
+        所在公司
+      </view>
+      <view class='flex2'>
+        <input placeholder-style="color:#979797; font-size:14px;" name="company" value="{{register.company}}" placeholder='请输入公司名称'></input>
+      </view>
+    </view>
+    <view class='form_item flex-start'>
+      <view class='flex1 item_title'>
+        公司职位
+      </view>
+      <view class='flex2'>
+        <input placeholder-style="color:#979797; font-size:14px;" name="job" value="{{register.job}}" placeholder='请输入所在公司的职位'></input>
+      </view>
+    </view>
+    <view class="actions">
+      <button form-type="submit">确认提交</button>
+    </view>
+  </form>
+  <view class='error'>公司名称和职位名称会显示在您众筹结束后的分享海报上，不填写 则不显示，订单提交后不可修改 </view>
+</view>

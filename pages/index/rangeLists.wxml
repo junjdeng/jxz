@@ -1,0 +1,105 @@
+<wxs module="wxmlFromat" src="../../utils/common.wxs"></wxs>
+
+<view class='container'>
+
+  <i-tabs current="{{ current }}" class="jx_tabs" bindchange="handleChange">
+    <i-tab key="tab1" title="速度榜"></i-tab>
+    <i-tab key="tab2" title="人气榜"></i-tab>
+    <i-tab key="tab3" title="财富榜"></i-tab>
+  </i-tabs>
+
+
+  <view wx:if="{{current == 'tab1'}}">
+    <view class='list'>
+      <!-- <view class='list_item flex-start'>
+        <view class='flex2'>
+          <image src='{{my_rank.header_img}}'></image>
+        </view>
+        <view class='flex3'>
+          <view>{{my_rank.name}}</view>
+          <view class='comment'>{{my_rank.num}}</view>
+        </view>
+        <view class='flex1 counts'>
+          8分钟
+        </view>
+      </view> -->
+
+      <view class='list_item flex-start' wx:for="{{rangeList1}}" wx:key="key" wx:for-index="index">
+        <view class='flex2'>
+          <i-icon type="integral_fill" size="28" color="{{wxmlFromat.getRangeColor(index)}}" />
+          <image src='{{item.header_img}}'></image>
+        </view>
+        <view class='flex3'>
+          <view>{{item.name}}</view>
+        </view>
+        <view class='flex1 counts'>
+          {{item.count}}
+        </view>
+      </view>
+
+    </view>
+  </view>
+
+
+  <view wx:if="{{current == 'tab2'}}">
+    <view class='list'>
+      <!-- <view class='list_item flex-start'>
+        <view class='flex2'>
+          <image src='{{my_rank.header_img}}'></image>
+        </view>
+        <view class='flex3'>
+          <view>{{my_rank.name}}</view>
+          <view class='comment'>{{my_rank.num}}</view>
+        </view>
+        <view class='flex1 counts'>
+          8分钟
+        </view>
+      </view> -->
+
+      <view class='list_item flex-start' wx:for="{{rangeList2}}" wx:key="key" wx:for-index="index">
+        <view class='flex2'>
+          <i-icon type="integral_fill" size="28" color="{{wxmlFromat.getRangeColor(index)}}" />
+          <image src='{{item.header_img}}'></image>
+        </view>
+        <view class='flex3'>
+          <view>{{item.name}}</view>
+        </view>
+        <view class='flex1 counts'>
+          {{item.count}}
+        </view>
+      </view>
+
+    </view>
+  </view>
+
+  <view wx:if="{{current == 'tab3'}}">
+    <view class='list'>
+      <!-- <view class='list_item flex-start'>
+        <view class='flex2'>
+          <image src='{{my_rank.header_img}}'></image>
+        </view>
+        <view class='flex3'>
+          <view>{{my_rank.name}}</view>
+          <view class='comment'>{{my_rank.num}}</view>
+        </view>
+        <view class='flex1 counts'>
+          8分钟
+        </view>
+      </view> -->
+
+      <view class='list_item flex-start' wx:for="{{rangeList3}}" wx:key="key" wx:for-index="index">
+        <view class='flex2'>
+          <i-icon type="integral_fill" size="28" color="{{wxmlFromat.getRangeColor(index)}}" />
+          <image src='{{item.header_img}}'></image>
+        </view>
+        <view class='flex3'>
+          <view>{{item.name}}</view>
+        </view>
+        <view class='flex1 counts'>
+          {{item.count}}
+        </view>
+      </view>
+
+    </view>
+  </view>
+</view>

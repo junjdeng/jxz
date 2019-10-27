@@ -1,0 +1,7 @@
+<!--pages/index/hold.wxml-->
+<view class='container'>
+  <rich-text nodes="{{html}}"></rich-text>
+  <view class="actions">
+    <button  data-url='/pages/index/holdapply' bindtap='navTo' form-type="submit">申请免费举办赛事</button>
+  </view>
+</view>

@@ -1,0 +1,27 @@
+<wxs module="wxmlFromat" src="../../utils/common.wxs"></wxs>
+<view class="container">
+
+  <view class='list'>
+    <view class='list_item' wx:for="{{list}}" wx:key="key">
+      <view class='item_top'>
+        <span>众筹项目：</span>{{item.title}}
+      </view>
+      <view class='flex-between'>
+        <view class='flex1'>
+          <image src='{{item.header_img}}'></image>
+        </view>
+        <view class='flex3'>
+          <text class='name'>{{item.name}}</text>
+          <view class='time'>{{item.create_time}}</view>
+        </view>
+        <view class='flex2 action'>
+          <span>￥{{item.support_mount}}</span>
+        </view>
+      </view>
+      <view class='progress_wrap'>
+        <i-progress status="wrong" percent="{{wxmlFromat.getFixedNumber((item.paid_amount/item.total_amount)*100,2)}}"></i-progress>
+      </view>
+    </view>
+
+  </view>
+</view>

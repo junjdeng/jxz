@@ -1,0 +1,29 @@
+<!--pages/index/supportHe.wxml-->
+<view class='container'>
+  <form class='dataform'  bindsubmit="formSubmit">
+    <view class='form_item item_header'>
+      <image src='{{order.header_img}}'></image>
+      <view class='name'>{{order.user_name}}</view>
+      <view class='select_Num clear'>
+        <view wx:for="{{order.support_norms}}" wx:key="key" wx:for-index="index" class='num_item {{index==selectIndex ? "active" : ""}}' data-index='{{index}}' catchtap='selectNum'>{{item}}元</view>
+      </view>
+    </view>
+
+    <view class='form_item flex-between'>
+      <view>支持金额（元）：</view>
+      <view>
+        <input hidden='true' name="activity_order_sn" value='{{order_sn}}'></input>
+        <input name="total_amount" value='{{order.support_norms[selectIndex]}}'></input>
+      </view>
+    </view>
+
+    <view class='form_item'>
+      <textarea name="text" placeholder='输入留言：' value="{{textareaValue}}" bindinput="textareaInput"></textarea>
+      <view class='count'>{{textareacurrentCounts}}/{{textareaMaxCounts}}</view>
+    </view>
+
+    <view class="actions">
+      <button form-type="submit">马上支付</button>
+    </view>
+  </form>
+</view>

@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "i-load-more": "../../frames/iview/load-more/index"
+  },
+  "navigationBarBackgroundColor": "#ffffff",
+  "navigationBarTextStyle": "black",
+  "navigationBarTitleText": "赛事详情",
+  "backgroundColor": "#eeeeee",
+  "backgroundTextStyle": "light"
+}

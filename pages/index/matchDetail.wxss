@@ -1,0 +1,29 @@
+/* pages/index/matchDetail.wxss */
+page{background: #f5f5f5; font-size: 24rpx; color: #302C3D;}
+.detail_header{width: 100%;}
+.detail_header image{height: 400rpx; width: 100%;}
+.detail_header .header_wrapper{background: #3478FF; color: #fff;height: 80rpx;position: relative; top: -4rpx;}
+.detail_header .header_wrapper .price{background: linear-gradient(90deg, #3478FF,#00F6FF);font-size: 36rpx;
+line-height: 80rpx; border-top-right-radius: 40rpx; border-bottom-right-radius: 40rpx;}
+.detail_header .header_wrapper .time{text-align: center;}
+
+.orginazation{margin: 10rpx 0; background: #fff; padding: 20rpx;}
+.orginazation image{width: 50rpx; height: 50rpx; border-radius: 50%;}
+.orginazation .company text{line-height: 50rpx; height: 50rpx; font-size: 28rpx; padding-left: 10rpx; position: relative; top: -10rpx;}
+.orginazation .name{line-height: 50rpx; font-size: 28rpx; font-weight: 600;}
+
+.detail_data{margin: 10rpx 0; background: #fff; padding: 20rpx; text-align: center;}
+.detail_data image{width: 30rpx; height: 30rpx;margin-right: 10rpx; position: relative; top: 4rpx;}
+.detail_data .num{color: #FF4F00; font-size: 32rpx; line-height: 65rpx;}
+
+.jx_tabs{width: 100%; background: #fff;}
+.list{margin-bottom: 90rpx;}
+
+
+
+
+.actions{position: fixed; bottom: 0; width: 100%; background: #fff;}
+.actions button{background: #979797; color:#fff;margin: 20rpx;}
+.actions button.active1{background: #EEF6FF; color: #3478FF; border: 1px solid #3478FF;}
+.actions button.active2{background: #E1FFE4;color: #00AE11; border: 1px solid #00AE11;}
+.actions .status{height: 80rpx; text-align: center; font-size: 32rpx; color: #302C3D; width: 100%; line-height: 80rpx;}

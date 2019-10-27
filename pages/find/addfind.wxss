@@ -1,0 +1,11 @@
+/* pages/find/addfind.wxss */
+page{background: #f5f5f5;}
+.actions{margin-top: 100rpx; }
+.actions button{background: #979797; color:#fff;margin: 20rpx; width: 710rpx;}
+.actions button.active{background: #00B9FF;}
+textarea{width: auto;}
+
+.add_form{background: #fff; width: 670rpx; margin: 20rpx;padding: 20rpx; font-size: 28rpx; line-height: 40rpx;}
+.add_form image{width: 100%;}
+.takeImg{color: #302C3D; font-size: 28rpx;}
+.takeImg .i-icon{position: relative; top: -4rpx;}

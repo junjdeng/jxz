@@ -1,0 +1,9 @@
+<!--pages/start/auth.wxml-->
+<view class='modal'>
+  <image src='../../images/auth.png'></image>
+  <view class='subtitle'>微信登录授权</view>
+  <view class='title'>尚未进行授权，请点击进行授权</view>
+  <button wx:if="{{canIUse}}" open-type="getUserInfo" lang="zh_CN" withCredentials="true" bindgetuserinfo="onGotUserInfo">
+    确定
+  </button>
+</view>

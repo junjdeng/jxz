@@ -1,0 +1,20 @@
+/* pages/index/sureOrder.wxss */
+page{background: #f5f5f5;}
+.sure_form{width: 100%;}
+.tr{text-align: right;}
+.form_item{background: #fff; margin: 20rpx; padding: 0 20rpx; border-radius: 8rpx; font-size: 32rpx;color: #302C3D;}
+.form_item .item_title{color: #302C3D; font-size: 32rpx; line-height: 110rpx;}
+.form_item .item_title span{color: #FF4F00; }
+.form_item .item_title .inputtips{line-height: 54rpx;font-size: 24rpx; color: #979797;}
+.form_item input{text-align: right; font: 28rpx; padding: 0 20rpx;}
+.form_item image{height: 240rpx; width: 240rpx; margin-right: 20rpx;}
+.form_item .card_content{display: flex; flex-direction: column; justify-content: space-between; height: 240rpx;}
+.form_item .card_content .title{font-size: 32rpx; line-height: 44rpx; color: #302C3D; font-weight: 600;}
+.form_item .card_content .price{font-size: 36rpx; line-height: 50rpx; color: #FF4F00;}
+.tips{padding:0 20rpx; color: #302C3D; font-size: 24rpx; line-height: 34rpx;}
+.tips span{color:#FF4F00}
+
+.actions{position: fixed; bottom: 0; width: 100%;  background: #fff;}
+.actions span{color:#FF4F00;}
+.actions button{background: #979797; color:#fff;margin: 20rpx;}
+.actions button.active2{background: #E1FFE4;color: #00AE11; border: 1px solid #00AE11;}

@@ -1,0 +1,25 @@
+/* pages/mine/records.wxss */
+page{background: #F5F5F5;}
+.list{ width: 100%;}
+.com_item{margin-bottom: 30rpx; background: #fff; padding: 0 20rpx;}
+.com_item image{width: 100%; border-radius: 8rpx;}
+.com_item .content{color: #302C3D; font-size: 28rpx; line-height: 42rpx; padding: 10rpx 0;}
+
+.com_header{padding: 10rpx 0;}
+.com_header image{height: 80rpx; width: 80rpx; border-radius: 50%; background: gray; position: relative; top: 4rpx;}
+.com_header .info{}
+.com_header .info .infoname{color: #302C3D; font-size: 28rpx;line-height: 60rpx;}
+.com_header .info .infoother{color: #979797; font-size: 24rpx; line-height: 30rpx;}
+.com_header .info .infoother span{color: #302C3D; padding-left: 10rpx; }
+
+.com_bottom{height: 60rpx;}
+.com_bottom view{font-size: 24rpx; color: #302C3D; line-height: 60rpx;}
+.com_bottom view i-icon{position: relative; top: -4rpx;}
+
+.com_comment{padding: 10rpx 0;}
+.comment_item{background: #f5f5f5; margin-bottom: 10rpx; border-radius: 8rpx; padding: 10rpx 0;}
+.comment_item image{width: 70rpx; height: 70rpx; border-radius: 50%; background: gray; margin-top: 15rpx; padding: 10rpx;}
+.comment_item .mm_aveter{align-self: flex-start ;text-align: center;}
+.comment_item .mm_name{ color: #302C3D; font-size: 28rpx; line-height: 40rpx;}
+.comment_item .mm_content{color: #302C3D; font-size: 24rpx;}
+.comment_item .mm_time{color: #979797; font-size: 24rpx;text-align: right; padding: 0 10rpx;}

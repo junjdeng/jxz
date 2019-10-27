@@ -1,0 +1,15 @@
+{
+  "usingComponents": {
+    "i-tabs": "../../frames/iview/tabs/index",
+    "i-tab": "../../frames/iview/tab/index",
+    "i-icon": "../../frames/iview/icon/index",
+    "i-load-more": "../../frames/iview/load-more/index"
+  },
+  
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "互动",
+    "backgroundColor": "#eeeeee",
+    "backgroundTextStyle": "light",
+    "enablePullDownRefresh": true
+}

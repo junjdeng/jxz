@@ -1,0 +1,25 @@
+<view class="container">
+  <view class='list_header flex-mc' style='background-image:url("{{match.cover_url}}")'>
+    <view class='title'>{{match.title}}</view>
+    <view class='sub_title'>
+      <text wx:for="{{match.label_list}}" wx:key="key" wx:for-item="label">{{label}}/</text>
+    </view>
+  </view>
+
+  <view class='list match_list'>
+    <view class='list_item flex-between' wx:for="{{list}}" wx:key="key" data-url='../../pages/index/matchDetail?id={{item.id}}&status={{item.status_name}}' catchtap='navTo'>
+      <view class='flex1 item_img'>
+        <image src='{{item.cover_url}}'></image>
+      </view>
+      <view class='flex2 flex-ms item_content'>
+        <view class='title'>{{item.title}}</view>
+        <view class='status'>{{item.status_name}}</view>
+        <view class='price'>￥{{item.price}}</view>
+      </view>
+    </view>
+  </view>
+
+   <view class='load_more'>
+    <i-load-more tip="暂无更多数据"  loading="{{haveNext==1 ? true : false}}" />
+   </view>
+</view>

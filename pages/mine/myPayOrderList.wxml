@@ -1,0 +1,21 @@
+<view class="container">
+  <view class='list list_fund'>
+
+    <view class='list_item fund_item flex-start' wx:for="{{list}}" wx:key="key" data-url='/pages/fund/fundDetail?order_sn={{item.order_sn}}&type={{item.status_name}}&orderself=true&save_info={{item.operation.save_info}}'  bindtap='navTo'>
+      <view class='flex1'>
+        <image src='{{item.cover_url}}'></image>
+      </view>
+      <view class='flex5 info'>
+        <view class='info1'>{{item.title}}
+          <!-- <span>自付</span> -->
+        </view>
+        <view class='info2'></view>
+        <view class='info3'>￥{{item.total_amount}}</view>
+      </view>
+    </view>
+
+  </view>
+  <view class='load_more'>
+    <i-load-more tip="暂无更多数据"  loading="{{haveNext==1 ? true : false}}" />
+  </view>
+</view>

@@ -1,0 +1,5 @@
+/* pages/index/hold.wxss */
+image{width: 100%;}
+
+.actions{position: fixed; bottom: 0; width: 100%;}
+.actions button{background: #00B9FF; color:#fff; border-radius: 0;}

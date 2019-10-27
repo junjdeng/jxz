@@ -1,0 +1,11 @@
+/* pages/mine/matcheds.wxss */
+page{background: #F5F5F5;}
+.list{ width: 100%;}
+.fund_item{margin: 10rpx 0 20rpx 0; background: #fff;}
+.fund_item image{width: 160rpx; height: 160rpx; padding: 10px;}
+.fund_item .info{padding-right:10px; align-self: flex-between;}
+.fund_item .info.info-start{align-self: flex-start; padding-top: 10rpx;}
+.fund_item .info .info1{color: #302C3D; font-size: 28rpx; line-height: 60rpx; font-weight: 600;}
+.fund_item .info .info1 span{float: right; color: #979797; font-size: 20rpx; }
+.fund_item .info .info2{color: #979797; font-size: 28rpx; line-height: 50rpx; }
+.fund_item .info .info3{color: #979797; font-size: 24rpx; line-height: 50rpx; }

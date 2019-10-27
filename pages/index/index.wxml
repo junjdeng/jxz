@@ -1,0 +1,39 @@
+<view class="container">
+  <swiper indicator-dots="true" autoplay="true" circular="true" interval="3000" duration="500" indicator-color="#dddddd" indicator-active-color="#ffffff">
+    <block wx:for="{{banner_list}}" wx:key="index">
+      <swiper-item>
+        <image src="{{item.cover_url}}" class="slide-image" data-url='{{item.url}}' data-type='{{item.url_type}}' bindtap='toWebUrl' />
+      </swiper-item>
+    </block>
+  </swiper>
+
+  <view class="flex-around actions shadow">
+    <view data-url='/pages/index/teamactivite' bindtap='navTo'>
+      <image src='../../images/action1.png'></image>
+      <label>团建</label>
+    </view>
+    <view>|</view>
+    <view data-url='/pages/index/hold' bindtap='navTo'>
+      <image src='../../images/action2.png'></image>
+      <label>举办</label>
+    </view>
+  </view>
+
+  <view class='list'>
+    <view class='list_title'>赛事推荐
+      <i-icon data-url='/pages/index/matchList' catchtap='navTo' type="enter" size="14" color="#80848f" style='float:right;' />
+    </view>
+    <view class='list_content'>
+      <view class='list_item shadow' wx:for="{{list}}" wx:key="key" data-url='../../pages/index/activityList?id={{item.id}}' catchtap='navTo'>
+        <image src='{{item.cover_url}}'></image>
+        <view class='title'>{{item.title}}</view>
+        <view class='flex-between content'>
+          <view class='subtitle'>
+             <text wx:for="{{item.label_list}}" wx:for-item="label" wx:key="key">{{label}}/</text>
+          </view>
+          <view class='totalnum'>{{item.activity_count}}场赛事</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

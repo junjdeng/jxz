@@ -1,0 +1,39 @@
+<view class="container">
+  <!-- <i-tabs current="{{ current }}" class="jx_tabs" bindchange="handleChange">
+    <i-tab key="tab1" title="自己支付"></i-tab>
+    <i-tab key="tab2" title="余额支付"></i-tab>
+  </i-tabs> -->
+
+  <!-- wx:if="{{current == 'tab1'}}" -->
+
+<form  bindsubmit="formSubmit">
+  <view class='list'>
+    <view class="selfsup_header">
+      <view>输入金额（元）</view>
+      <view class='flex-start money'>
+        <span>￥</span>
+        <input hidden='true' name="activity_order_sn" value='{{order_sn}}'></input>
+        <input type='digit' name="total_amount" placeholder='请输入支持金额'></input>
+      </view>
+    </view>
+    <view class="tips">本次赛事最多支持剩余金额：{{reset}}元</view>
+    <view class="actions">
+      <button form-type="submit" class='active'>确认支付</button>
+    </view>
+  </view>
+</form>
+
+<!-- 
+  <view class='list' wx:if="{{current == 'tab2'}}">
+    <view class="partners_header">
+      <view>可用余额</view>
+      <view class='income'>￥200</view>
+    </view>
+    <view class="tips">本次赛事最多支持剩余金额：12000元</view>
+    <view class="actions">
+      <button class='active' form-type="submit">确认支付</button>
+    </view>
+  </view> -->
+
+
+</view>

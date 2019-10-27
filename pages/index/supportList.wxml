@@ -1,0 +1,22 @@
+<!--pages/index/supportList.wxml-->
+<wxs module="wxmlFromat" src="../../utils/common.wxs"></wxs>
+
+<view class='container'>
+  <view class='list'>
+    <view class='list_item flex-start' wx:for="{{supportList}}" wx:key="key">
+      <view class='flex1'>
+        <image src='{{item.header_img}}'></image>
+      </view>
+      <view class='flex3'>
+        <view>{{item.name}}</view>
+        <view class='comment'>{{item.text}}</view>
+      </view>
+       <view class='flex2 counts'>
+        <view>{{wxmlFromat.getSubString(item.create_time,5,11)}}</view>
+        <view class='comment'>￥{{item.amount}}</view>
+        <!-- <i-icon type="browse" size="20" color="#80848f" />
+        <i-icon type="message" size="20" color="#80848f" /> -->
+      </view>
+    </view>
+  </view>
+</view>

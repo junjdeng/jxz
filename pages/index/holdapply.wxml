@@ -1,0 +1,60 @@
+<!--pages/index/holdapply.wxml-->
+<view class='container'>
+  <view class='list_header'>
+    <view class='title' data-url='/pages/index/selectMatch' catchtap='navTo'>赛事信息
+      <span style="float:right; color:#333333;">></span>
+    </view>
+    <view>赛事名称：{{selectMatch.title}}</view>
+    <!-- <view>赛事时间：{{selectMatch.title}}</view>
+    <view>赛事地点：{{selectMatch.title}}</view> -->
+  </view>
+
+  <form class='apply_form' bindsubmit="formSubmit">
+    <view class='form_item flex-start'>
+      <view class='flex1 item_title'>
+        <span>*</span>申办单位
+      </view>
+      <view class='flex2'>
+        <input hidden='true' name="match_id" value="{{selectMatch.id}}"></input>
+        <input placeholder-style="color:#979797; font-size:14px;" name="company" placeholder='请输入名称'></input>
+      </view>
+    </view>
+
+    <view class='form_item flex-start'>
+      <view class='flex1 item_title'>
+        <span>*</span>预计人数
+      </view>
+      <view class='flex2'>
+        <input placeholder-style="color:#979797; font-size:14px;" name="people_count" placeholder='请输入数量'></input>
+      </view>
+    </view>
+    <view class='form_item flex-start'>
+      <view class='flex1 item_title'>
+        <span>*</span>联系方式
+      </view>
+      <view class='flex2'>
+        <input placeholder-style="color:#979797; font-size:14px;" name="phone" placeholder='请输入手机号码'></input>
+      </view>
+    </view>
+    <view class="actions">
+      <button form-type="submit">确认提交</button>
+      <view class='error'>提交后24小时内，有工作人员联系您,您也可以直接店家拨打工作人员电话 
+       <block wx:for="{{contact_list}}" wx:key="key" >
+        {{item.name}}：
+        <text>{{item.phone}}</text>
+        </block>
+      </view>
+    </view>
+  </form>
+
+
+
+  <view class='cover' catchtap='showModal' wx:if="{{visible}}">
+    <view class='modal'>
+      <image src='../../images/susses.png'></image>
+      <view class='title'>资料提交成功</view>
+      <view>结果将来1-2个工作日反馈</view>
+      <button catchtap='sureKnow'>我知道了</button>
+    </view>
+  </view>
+</view>

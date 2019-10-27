@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+ 
+  },
+  "navigationBarBackgroundColor": "#ffffff",
+  "navigationBarTextStyle": "black",
+  "navigationBarTitleText": "免费申请举办赛事",
+  "backgroundColor": "#eeeeee",
+  "backgroundTextStyle": "light"
+}

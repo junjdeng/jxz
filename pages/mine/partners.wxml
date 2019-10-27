@@ -1,0 +1,67 @@
+<!--pages/mine/partners.wxml-->
+<view class="container">
+  <view class='fixed_header'>
+    <view class="partners_header">
+      <view>积分总额</view>
+      <view class='income'>{{sum}}</view>
+      <!-- <view class='withdraw'>
+       <span catchtap="addCard">提现银行卡：去添加银行卡信息</span>
+      </view>
+       <view class='withdraw' style='margin-top:20rpx;'>
+        <span catchtap="showModal">申请积分提现</span>
+      </view> -->
+
+      <view class='withdraw flex-start'>
+        <view class='flex1 btn' style='margin-right:20rpx;' >提现银行卡
+          <view  wx:if='{{userinfo.bank_card.length >0}}'>{{userinfo.bank_card}}</view>
+          <view data-url='/pages/fund/addCard' catchtap='navTo' wx:else>暂无银行卡，去添加</view>
+        </view>
+        <view class='flex1 btn' style='line-height:90rpx;' catchtap="showModal">
+          申请积分提现
+        </view>
+      </view>
+    </view>
+    <i-tabs current="{{ current }}" class="jx_tabs" bindchange="handleChange">
+      <i-tab key="tab1" title="积分明细"></i-tab>
+      <i-tab key="tab2" title="结算明细"></i-tab>
+    </i-tabs>
+  </view>
+
+
+  <view class='list list_partner' wx:if="{{current == 'tab1'}}">
+    <view class='list_partner_item flex-between shadow' wx:for="{{list1}}" wx:key="key">
+      <view class='flex3'>
+        <view class='name'>{{item.name}}</view>
+        <view class='time'>{{item.create_time}}</view>
+      </view>
+      <view class='flex2 status'>
+        {{item.amount}}
+      </view>
+    </view>
+  </view>
+
+
+  <view class='list list_partner' wx:if="{{current == 'tab2'}}">
+    <view class='list_partner_item flex-between shadow' wx:for="{{list2}}" wx:key="key">
+      <view class='flex3'>
+        <view class='name'>{{item.status_name}}</view>
+        <view class='time'>{{item.create_time}}</view>
+      </view>
+      <view class='flex2 status'>
+        {{item.amount}}
+      </view>
+    </view>
+  </view>
+
+
+
+  <view class='cover' catchtap='showModal' wx:if="{{visible}}">
+    <view class='modal'>
+      <image src='../../images/susses.png'></image>
+      <view class='title'>积分提现申请提交成功</view>
+      <view>本次提现积分：{{showsum}}积分</view>
+      <view>结果将来1-2个工作日反馈</view>
+      <button catchtap='showModal1'>我知道了</button>
+    </view>
+  </view>
+</view>

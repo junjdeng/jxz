@@ -1,0 +1,11 @@
+<!--pages/mine/phone.wxml-->
+<view class="container">
+   <view class='phone_card'>
+     当前绑定手机号
+     <span>{{phone=="" ? "暂未绑定手机号" : phone}}</span>
+   </view>
+
+    <view class="actions">
+       <button data-url='/pages/mine/phoneblind' catchtap='navTo'>重新绑定手机</button>
+    </view>
+</view>

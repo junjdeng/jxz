@@ -1,0 +1,13 @@
+<!--pages/index/teamactivite.wxml-->
+<view class='container'>
+  <view class='header'>
+    <view class='title'>{{artData.title}}</view>
+    <view class='time'>
+      <span>践行者</span>{{artData.create_time}}
+    </view>
+  </view>
+
+  <view class='content'>
+    <rich-text nodes='{{html}}'></rich-text>
+  </view>
+</view>

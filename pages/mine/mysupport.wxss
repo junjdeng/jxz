@@ -1,0 +1,10 @@
+/* pages/mine/mysupport.wxss */
+page{background: #f5f5f5;}
+.list{margin: 20rpx; width: 710rpx;}
+.list .list_item{background: #fff; padding: 20rpx; color: #302C3D; font-size: 28rpx; margin-bottom: 10rpx;}
+.list .list_item .item_top{color: #302C3D; font-size: 32rpx; line-height: 80rpx; border-bottom:2rpx solid #EBEBEB;}
+.list .list_item .item_top span{font-weight: 600;}
+.list .list_item image{width: 110rpx; height: 110rpx; margin: 10rpx 0; border-radius: 50%; background: gray;}
+.list .list_item .name{padding-left: 10rpx;}
+.list .list_item .time{padding-left: 10rpx; color: #979797; font-size: 20rpx;}
+.list .list_item .action{text-align: right; color: #FF4F00;}

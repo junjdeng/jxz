@@ -1,0 +1,19 @@
+<view class="container">
+  <view class='list'>
+    <view class='list_content'>
+      <view class='list_item shadow' wx:for="{{list}}" wx:key="key" data-url='../../pages/index/activityList?id={{item.id}}' catchtap='navTo'>
+        <image src='{{item.cover_url}}'></image>
+        <view class='title'>{{item.title}}</view>
+        <view class='flex-between content'>
+          <view class='subtitle'>
+            <text wx:for="{{item.label_list}}" wx:for-item="label" wx:key="key">{{label}}/</text>
+          </view>
+          <view class='totalnum'>{{item.activity_count}}场赛事</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='load_more'>
+    <i-load-more tip="暂无更多数据" loading="{{haveNext==1 ? true : false}}" />
+  </view>
+</view>

@@ -1,0 +1,23 @@
+<!--pages/mine/tripinfo.wxml-->
+<view class='container'>
+  <view wx:for="{{list}}" wx:key="key">
+    <view class='list_header'>
+      <view class='title'>赛事信息</view>
+      <view>活动名称：{{item.title}}</view>
+      <view>签到日：{{item.sign_date}}</view>
+      <view>挑战日：{{item.start_challenge_date}}-{{item.end_challenge_date}}</view>
+      <view>返程日：{{item.back_date}}</view>
+      <view>集中地：{{item.meeting_point}}</view>
+    </view>
+
+    <view class='list'>
+      <view class='list_item' wx:for="{{item.user_list}}" wx:for-item="obj" wx:key="key">
+        <view class='item_title'>{{obj.hotel_title}}
+          <span>{{obj.name}}</span>
+        </view>
+        <view class='item_comtent'>{{obj.hotel_text}}</view>
+      </view>
+    </view>
+
+  </view>
+</view>

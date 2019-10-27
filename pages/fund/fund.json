@@ -1,0 +1,14 @@
+{
+  "usingComponents": {
+      "i-tabs": "../../frames/iview/tabs/index",
+      "i-tab": "../../frames/iview/tab/index",
+      "i-button": "../../frames/iview/button/index",
+      "i-progress": "../../frames/iview/progress/index",
+      "i-load-more": "../../frames/iview/load-more/index"
+  },
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "众筹",
+    "backgroundColor": "#eeeeee",
+    "backgroundTextStyle": "light"
+}

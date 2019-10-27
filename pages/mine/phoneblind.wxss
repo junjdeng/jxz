@@ -1,0 +1,13 @@
+/* pages/mine/phoneblind.wxss */
+page{background: #f5f5f5;}
+.phoneform{background: #fff; width: 710rpx; margin: 20rpx; border-radius: 8rpx; position: relative;}
+.phoneform .input_wrap{ padding: 0;}
+.phoneform .input_wrap input{ padding:10rpx; margin: 0 0 20rpx 20rpx;}
+.phoneform input{border: 1px solid #dedede; height: 88rpx; border-radius: 8rpx; line-height: 88rpx; font-size: 32rpx; padding: 10rpx; margin: 20rpx;}
+.phoneform .tips{color:#302C3D; font-size: 32rpx; text-align: center; line-height: 100rpx;}
+.phoneform .code{color: #302C3D; font-size: 28rpx; height: 114rpx; line-height: 114rpx; align-self: flex-start; text-align: center; margin-right: 20rpx; background: lightgray;}
+.phoneform .coun{color: #302C3D; font-size: 28rpx; position: absolute; right: 45rpx; top: 160rpx;}
+
+.actions{width: 670rpx; margin-top: 40rpx;}
+.actions button{background: #00B9FF; color:#fff;}
+.error{color: #979797; font-size: 24rpx; line-height: 100rpx; text-align: center;}

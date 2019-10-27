@@ -1,0 +1,10 @@
+/* pages/index/matchList.wxss */
+page{background: #f5f5f5;}
+.list{padding: 20rpx; width: 690rpx; margin-top: 20rpx;}
+.list_content{}
+.list_item{margin-bottom: 30rpx; border-radius: 8rpx; overflow: hidden;}
+.list_item image{ height: 300rpx; width:100%;}
+.list_item .content{padding: 0 10rpx 20rpx 10rpx;}
+.list_item .title{color: #302C3D; font-size: 36rpx;padding: 10rpx; font-weight: 500;}
+.list_item .subtitle{ color: #979797; font-size: 24rpx;}
+.list_item .totalnum{color: #302C3D; font-size: 24rpx;}

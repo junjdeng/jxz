@@ -1,0 +1,19 @@
+/**index.wxss**/
+swiper{width: 100%; height: 320rpx;}
+.slide-image{width: 100%; height: 100%;}
+
+.actions{margin: 20rpx 0; padding: 0 20rpx; height: 140rpx; width: 670rpx; border-radius: 4rpx;  position: absolute; top: 290rpx; background: #fff;}
+.actions image{width: 60rpx; height: 60rpx; vertical-align: middle;}
+.actions label{padding: 0 20rpx; line-height: 140rpx; font-size: 32rpx; color: #302C3D;}
+
+.list{padding: 20rpx; width: 690rpx; margin-top: 140rpx;}
+.list_title{color: #302C3D; font-size: 28rpx; line-height: 50rpx; padding: 10rpx 0;}
+.list_content{}
+.list_item{margin-bottom: 30rpx; border-radius: 8rpx; overflow: hidden;}
+.list_item image{ height: 300rpx; width:100%;}
+.list_item .content{padding: 0 10rpx 20rpx 10rpx;}
+.list_item .title{color: #302C3D; font-size: 36rpx;padding: 10rpx; font-weight: 500;}
+.list_item .subtitle{ color: #979797; font-size: 24rpx;}
+.list_item .totalnum{color: #302C3D; font-size: 24rpx;}
+
+

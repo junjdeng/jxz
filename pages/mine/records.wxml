@@ -1,0 +1,46 @@
+<!--pages/mine/records.wxml-->
+<view class="container">
+  <view class='list list_comminity'>
+
+    <view class='list_item com_item' wx:for="{{comlist}}" wx:key="key">
+      <view class='com_header flex-start'>
+        <view class='flex1'>
+          <image src='{{item.header_img}}'></image>
+        </view>
+        <view class='flex5 info'>
+          <view class='infoname'>{{item.user_name}}</view>
+          <view class='infoother'>{{item.create_time}}
+            <span>{{item.team_title}}</span>
+          </view>
+        </view>
+      </view>
+      <view class='content'>{{item.content}}</view>
+      <image  mode='aspectFill'  src='{{item.cover_url}}' data-url='{{item.cover_url}}' bindtap='preImage'></image>
+      <!-- <view class='flex-around com_bottom'>
+        <view>
+          <i-icon type="send" size="18" color="#80848f" />分享
+        </view>
+        <view>
+          <i-icon type="message" size="18" color="#80848f" />评论
+        </view>
+        <view>
+          <i-icon type="praise" size="18" color="#80848f" />点赞
+        </view>
+      </view> -->
+      <!-- <view class='com_comment'>
+        <view class='comment_item flex-start'>
+          <view class='flex2 mm_aveter'>
+            <image src='../../images/tabbar1.png'></image>
+          </view>
+          <view class='flex5'>
+            <view class='mm_name'>马云</view>
+            <view class='mm_content'>超过我是不可能的</view>
+          </view>
+          <view class='flex2'>
+            <view class='mm_time'>2019-12-12</view>
+          </view>
+        </view>
+      </view> -->
+    </view>
+  </view>
+</view>

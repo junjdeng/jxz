@@ -1,0 +1,11 @@
+{
+  "usingComponents": {
+      "i-tabs": "../../frames/iview/tabs/index",
+      "i-tab": "../../frames/iview/tab/index"
+  },
+  "navigationBarBackgroundColor": "#ffffff",
+  "navigationBarTextStyle": "black",
+  "navigationBarTitleText": "合伙人",
+  "backgroundColor": "#eeeeee",
+  "backgroundTextStyle": "light"
+}

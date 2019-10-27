@@ -1,0 +1,80 @@
+<wxs module="wxmlFromat" src="../../utils/common.wxs"></wxs>
+
+<view class="container">
+  <form class='sure_form'>
+    <view class='form_item flex-start'>
+      <view class='flex3 item_title'>
+        <view style='line-height:70rpx;'>
+          <span>*</span>个人信息
+        </view>
+        <view class='inputtips'>
+          {{register.name.lenght== null ? "请填写以便工作人员更好为您服务" : "发起众筹订单前可随时更改个人信息"}}
+        </view>
+      </view>
+      <view class='flex1 tr' data-url='/pages/index/addMyInfo' catchtap='navTo'>
+        <text>{{register.name}}</text>
+        <i-icon type="enter" size="14" color="#80848f" />
+      </view>
+    </view>
+
+    <view class='form_item flex-start' data-url='/pages/index/selectSingle?selectedIndex={{selectedIndex}}' catchtap='navTo'>
+      <view class='flex2 item_title' >
+        <span>*</span>选择队伍
+      </view>
+      <view class='flex3 tr'>
+        {{act.team_list[selectedIndex].title}}
+        <input hidden='true' disabled='true' name="team_id" value='{{act.team_list[selectedIndex].team_id}}' />
+        <i-icon type="enter" size="14" color="#80848f" />
+      </view>
+    </view>
+
+    <view class='form_item flex-start' style='background:#f5f5f5;'>
+      <view class='flex1'>
+        <image src='{{act.cover_url}}'></image>
+      </view>
+      <view class='flex3 card_content'>
+        <view class='flex3 title'>{{act.title}}</view>
+        <view class='flex1 price'>￥{{act.price}}</view>
+      </view>
+    </view>
+
+    <view class='form_item flex-start'>
+      <view class='flex2 item_title'>
+        {{orderType==0 ? "购买人数":"众筹人数"}}
+      </view>
+      <view class='flex3 tr'>
+        <i-input-number value="{{num}}" min="1" max="100" bindchange="handleChange1" />
+      </view>
+    </view>
+
+    <!-- <view class='form_item flex-start' wx:if='{{orderType==1}}'>
+      <view class='flex2 item_title'>
+      {{isLimitNum ==false ? "众筹人数限制":"众筹人数不限制"}}
+      </view>
+      <view class='flex3 tr'>
+          <switch bindchange="switch1Change" />
+      </view>
+    </view>
+
+     <view class='form_item flex-start' wx:if='{{orderType==1 && isLimitNum ==false}}'>
+      <view class='flex2 item_title'>
+        受限人数
+      </view>
+      <view class='flex3'>
+           <input placeholder-style="color:#979797; font-size:14px;" placeholder='请输入受限人数'></input> 
+      </view>
+    </view> -->
+  </form>
+
+  <view class='tips'>
+    注：如果最终不参加该赛事，报名的金额可以用于其他赛事。不支持退款。如众筹不成功 款项退回支付方原帐号。提交订单即同意
+    <span>《践行者用户协议》</span>
+  </view>
+
+  <view class="actions flex-start">
+    <view class='flex2' style='padding-left:20rpx;'>总计：
+      <span>￥{{wxmlFromat.getFixedNumber(act.price*num,2)}}</span>
+    </view>
+    <button class='flex1 active2' catchtap='submitOrder' >{{orderType == 0 ? "提交订单":"发起众筹"}}</button>
+  </view>
+</view>

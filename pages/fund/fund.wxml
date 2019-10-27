@@ -1,0 +1,74 @@
+<wxs module="wxmlFromat" src="../../utils/common.wxs"></wxs>
+
+<view class="container">
+  <i-tabs current="{{ current }}" class="jx_tabs" bindchange="handleChange">
+    <i-tab key="tab1" title="进行中"></i-tab>
+    <i-tab key="tab2" title="成功"></i-tab>
+    <i-tab key="tab3" title="失败"></i-tab>
+  </i-tabs>
+
+
+  <view class='list list_fund' wx:if="{{current == 'tab1'}}">
+
+    <view class='list_item fund_item' wx:for="{{list1}}" wx:key="key">
+      <view class=" flex-start" data-url='/pages/fund/fundDetail?order_sn={{item.order_sn}}&type=1&save_info={{item.operation.save_info}}' bindtap='navTo'>
+        <view class='flex1'>
+          <image src='{{item.cover_url}}'></image>
+        </view>
+        <view class='flex5 info info-start'>
+          <view class='info1'>{{item.title}}</view>
+          <view class='info2'>￥{{item.total_amount}}</view>
+        </view>
+      </view>
+      <view class='fund_bottom'>
+        <view class='fund_progress_title'>还差
+          <span>￥{{wxmlFromat.getFixedNumber((item.total_amount - item.paid_amount),2)}}</span>
+        </view>
+        <view class='fund_progress_wrap'> <i-progress status="wrong" percent="{{wxmlFromat.getFixedNumber((item.paid_amount/item.total_amount*100),2)}}"></i-progress></view>
+        <view class='flex-around'>
+          <i-button  inline size="small" shape="circle" type="info" data-url="/pages/fund/selfsupport?reset={{item.total_amount - item.paid_amount}}&order_sn={{item.order_sn}}"   bind:click="navTo">自己支持</i-button>
+          <i-button  inline size="small" shape="circle" type="success" data-url='/pages/fund/fundDetail?order_sn={{item.order_sn}}&type=1' bindtap='navTo' >点击众筹</i-button>
+        </view>
+        <view>
+        </view>
+      </view>
+    </view>
+
+  </view>
+
+
+  <view class='list list_fund' wx:if="{{current == 'tab2'}}">
+
+    <view class='list_item fund_item flex-start' wx:for="{{list2}}" wx:key="key" data-url='/pages/fund/fundDetail?order_sn={{item.order_sn}}&type=2&save_info={{item.operation.save_info}}' bindtap='navTo'>
+      <view class='flex1'>
+        <image src='{{item.cover_url}}'></image>
+      </view>
+      <view class='flex5 info'>
+        <view class='info1'>{{item.title}}</view>
+        <view class='info2'>￥{{item.total_amount}}</view>
+        <view class='info3'>成功</view>
+      </view>
+    </view>
+
+  </view>
+
+
+  <view class='list list_fund' wx:if="{{current == 'tab3'}}">
+
+    <view class='list_item fund_item flex-start' wx:for="{{list3}}" wx:key="key" data-url='/pages/fund/fundDetail?order_sn={{item.order_sn}}&type=3&save_info={{item.operation.save_info}}' bindtap='navTo'>
+      <view class='flex1'>
+        <image src='{{item.cover_url}}'></image>
+      </view>
+      <view class='flex5 info'>
+        <view class='info1'>{{item.title}}</view>
+        <view class='info2'>￥{{item.total_amount}}</view>
+        <view class='info3'>失败</view>
+      </view>
+    </view>
+
+  </view>
+
+  <view class='load_more'>
+    <i-load-more tip="暂无更多数据"  loading="{{haveNext==1 ? true : false}}" />
+  </view>
+</view>

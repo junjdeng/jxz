@@ -1,0 +1,15 @@
+page{background: #F5F5F5;}
+.jx_tabs{width: 100%; background: #fff; position: fixed; top: 0; z-index: 99;}
+.list{ width: 100%;}
+/* margin-top: 94rpx; */
+
+.partners_header{background: linear-gradient(2deg, #3478FF,#00B9FF); height: 240rpx;width: 100%; text-align: center; color: #fff; font-size: 28rpx; display: flex; flex-direction: column; justify-content: center;}
+.partners_header .income{font-size: 48rpx;}
+.tips{color: #302C3D; font-size: 28rpx; line-height: 80rpx; margin-top: 10rpx; background: #fff; text-indent: 1em;}
+.actions{margin-top: 100rpx; }
+.actions button{background: #979797; color:#fff;margin: 20rpx; width: 710rpx;}
+.actions button.active{background: #00B9FF;}
+
+.selfsup_header{background: #fff; height: 140rpx;width: 100%; color: #636363; font-size: 28rpx; padding: 20rpx;}
+.selfsup_header .money{height: 100rpx;}
+.selfsup_header .money input{width: 100%;}

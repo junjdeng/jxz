@@ -1,0 +1,86 @@
+<view class="container">
+  <view class='detail_header'>
+    <swiper indicator-dots="true" autoplay="true" circular="true" interval="3000" duration="500" indicator-color="#dddddd" indicator-active-color="#ffffff">
+      <block wx:for="{{act.photo_list}}" wx:key="index">
+        <swiper-item>
+          <image src="{{item.url}}" class="slide-image" />
+        </swiper-item>
+      </block>
+    </swiper>
+
+    <view class='flex-start header_wrapper'>
+      <view class='flex3  price'>￥{{act.price}}</view>
+      <view class='flex2 time' wx:if="{{status == '报名中'}}">
+        <view style='font-size:28rpx;' >距离众筹截止</view>
+        <view>{{resetTime}}</view>
+      </view>
+      <view class='flex2 time' wx:elif="{{status == '已结束'}}">
+        <view style='font-size:28rpx;' > 活动{{status}}</view>
+      </view>
+      <view class='flex2 time' wx:elif="{{status == '报名已截止'}}">
+        <view style='font-size:28rpx;' > 活动{{status}}</view>
+      </view>
+    </view>
+    <view class='orginazation'>
+      <view class='company'>
+        <image src='{{act.sponsor_cover_url}}'></image>
+        <text>{{act.sponsor}}</text>
+      </view>
+      <view class='name'>{{act.title}}</view>
+    </view>
+    <view class='detail_data flex-around'>
+      <view class='flex1'>
+        <view class='num'>{{act.price}}元</view>
+        <view>
+          <image src='../../images/detail1.png'></image>目标金额
+        </view>
+      </view>
+      <view class='flex1'>
+        <view class='num'>{{act.join_count}}人</view>
+        <view>
+          <image src='../../images/detail2.png'></image>报名人数
+        </view>
+      </view>
+      <view class='flex1'>
+        <view class='num'>{{act.support_count}}人</view>
+        <view>
+          <image src='../../images/detail3.png'></image>支持人数
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <i-tabs current="{{ current }}" class="jx_tabs" bindchange="handleChange">
+    <i-tab key="tab1" title="详情描述"></i-tab>
+    <i-tab key="tab2" title="报名相关"></i-tab>
+    <i-tab key="tab3" title="参赛标准"></i-tab>
+  </i-tabs>
+
+  <view class='list' wx:if="{{current == 'tab1'}}">
+    <rich-text nodes="{{act.note_1}}"></rich-text>
+  </view>
+
+  <view class='list' wx:if="{{current == 'tab2'}}">
+    <rich-text nodes="{{act.note_2}}"></rich-text>
+  </view>
+
+  <view class='list' wx:if="{{current == 'tab3'}}">
+    <rich-text nodes="{{act.note_3}}"></rich-text>
+  </view>
+
+
+  <view class="actions">
+    <view  class="flex-start" wx:if="{{status == '报名中'}}">
+      <button class='flex1 active1' data-url='../../pages/index/sureOrder?type=0&save_info=0' catchtap='navTo'>我要自付</button>
+      <!-- <button class='flex1 active2' data-url='../../pages/index/sureOrder?type=1' catchtap='navTo'>我要众筹</button> -->
+      <button class='flex1 active2'  catchtap='myHelper'>我要众筹</button>
+    </view>
+    <view class='status' wx:elif="{{status == '已结束'}}">
+      活动{{status}}
+    </view>
+    <view class='status' wx:elif="{{status == '报名已截止'}}">
+      活动{{status}}
+    </view>
+  </view>
+
+</view>

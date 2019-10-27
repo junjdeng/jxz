@@ -1,0 +1,12 @@
+<view class="container">
+  <radio-group class="radio-group" bindchange="radioChange">
+    <view class="radio" wx:for="{{items}}" wx:key="key" wx:index="index">
+      <text>{{item.title}}</text>
+      <radio value="{{index}}" checked="{{index==selectIndex ? true : false}}" /> 
+    </view>
+  </radio-group>
+
+   <view class="actions">
+       <button data-index='{{selectIndex}}' bindtap='sureClick'>确认选择</button>
+    </view>
+</view>

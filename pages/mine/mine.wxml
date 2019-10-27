@@ -1,0 +1,86 @@
+<view class="container">
+  <image class='minebg' src='../../images/minebg.png'></image>
+  <view class='mine_card shadow'>
+    <view class='mine_card_top flex-start'>
+      <view class='flex1'>
+        <image src='{{loginUserInfo.header_img}}'></image>
+      </view>
+      <view class='flex5' style='padding-left:20rpx;'>
+        <view class='name'>{{loginUserInfo.name}}</view>
+        <!-- <view>ID:888888</view> -->
+      </view>
+      <view class='flex2'  data-url='/pages/mine/infomation' bindtap="navTo">
+        <span>个人信息 </span>
+        <i-icon type="enter" size="18" color="#80848f" style='position:relative; top:-4rpx;'  />
+      </view>
+    </view>
+    <view class='flex-start actions'>
+      <view class='actionBtn flex1' data-url='/pages/mine/tripinfo' bindtap="navTo">
+        <image src='../../images/mine1.png'></image>
+        <view>行程信息</view>
+      </view>
+      <view class='actionBtn flex1' data-url='/pages/mine/insuranceinfo' bindtap="navTo">
+        <image src='../../images/mine2.png'></image>
+        <view>保险信息</view>
+      </view>
+      <view class='actionBtn flex1' data-url='/pages/fund/fund' bindtap="switchTo">
+        <image src='../../images/mine3.png'></image>
+        <view>众筹订单</view>
+      </view>
+       <view class='actionBtn flex1' data-url='/pages/mine/myPayOrderList' bindtap="navTo">
+        <image src='../../images/mine10.png'></image>
+        <view>自付订单</view>
+      </view>
+      <view class='actionBtn flex1' data-url='/pages/mine/mysupport' bindtap="navTo">
+        <image src='../../images/mine4.png'></image>
+        <view>我的支持</view>
+      </view>
+    </view>
+  </view>
+
+  <view class='mine_list'>
+    <view class='sesstion'>
+      <view class='list_item' data-url='/pages/mine/partners' bindtap="navTo">
+        <image src='../../images/mine5.png'></image>合伙人
+        <i-icon type="enter" size="14" color="#80848f" style='float:right;' />
+      </view>
+      <view class='list_item' data-url='/pages/mine/contacts' bindtap="navTo">
+        <image src='../../images/mine6.png'></image>联系人管理
+        <i-icon type="enter" size="14" color="#80848f" style='float:right;' />
+      </view>
+      <view class='list_item' data-url='/pages/mine/phone' bindtap="navTo">
+        <image src='../../images/mine7.png'></image>手机绑定
+        <i-icon type="enter" size="14" color="#80848f" style='float:right;' />
+      </view>
+    </view>
+
+    <view class='sesstion'>
+      <view class='list_item' data-url='/pages/mine/matcheds' bindtap="navTo">
+        <image src='../../images/mine8.png'></image>完赛记录
+        <i-icon type="enter" size="14" color="#80848f" style='float:right;' />
+      </view>
+    </view>
+
+     <view class='sesstion'data-url='/pages/mine/records' bindtap="navTo">
+      <view class='list_item'>
+        <image src='../../images/mine9.png'></image>我的动态
+        <i-icon type="enter" size="14" color="#80848f" style='float:right;' />
+      </view>
+    </view>
+
+     <view class='sesstion'  bindtap="showModal1">
+      <view class='list_item'>
+        <image src='../../images/mine11.png'></image>分享小程序
+        <i-icon type="enter" size="14" color="#80848f" style='float:right;' />
+      </view>
+    </view>
+  </view>
+
+  <painter style="position:fixed;top:-9999rpx" palette="{{erCodeTemplate}}" bind:imgOK="onErCodeImgOK" />
+
+   <view class='cover' catchtap='showModal1' wx:if="{{visible1}}">
+    <painter customStyle='margin-left:50rpx; margin-top:150rpx;' palette="{{template1}}" bind:imgOK="onImgOK" />
+    <button class='btn btn1' open-type="share"> 转发</button>
+    <button class='btn btn2' catchtap='saveImage'>保存</button>
+  </view>
+</view>

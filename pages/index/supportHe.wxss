@@ -1,0 +1,14 @@
+/* pages/index/supportHe.wxss */
+page{background: #f5f5f5;}
+.dataform{margin: 20rpx; width: 710rpx; font-size: 28rpx;}
+.form_item{background: #fff; padding: 20rpx; margin-bottom: 20rpx; }
+.item_header{text-align: center;}
+.form_item image{width: 110rpx; height: 110rpx; border-radius: 50%;}
+.form_item input{text-align: right;}
+.select_Num{width: 670rpx; margin-top: 50rpx;}
+.num_item{display: inline-block; float: left; border: 1px solid #EBEBEB; margin: 10rpx 5rpx; padding: 20rpx 0; width: 210rpx;color: #FF4F00;}
+.num_item.active{background:#FF4F00; color: #fff; }
+.count{text-align: right;}
+
+.actions{position: fixed; bottom: 20rpx; width: 710rpx;}
+.actions button{background: #00B9FF; color:#fff;}

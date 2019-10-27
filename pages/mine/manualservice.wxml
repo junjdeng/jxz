@@ -1,0 +1,18 @@
+<!--pages/mine/manualservice.wxml-->
+<view class='container'>
+  <view class='full'>
+    <view class='flex5'>
+      <image src='../../images/code.png'></image>
+    </view>
+    <view class='flex1'>
+      <view>长按识别二维码</view>
+      <view>添加客服咨询</view>
+    </view>
+    <view class='flex4' style=' margin-top: 100rpx;'>
+      <view>客服电话：
+        <span>13728310106</span>
+      </view>
+      <view>（周一至周日 9:00-22:00）</view>
+    </view>
+  </view>
+</view>

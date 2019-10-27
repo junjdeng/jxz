@@ -1,0 +1,84 @@
+{
+  "pages": [
+    "pages/start/start",
+    "pages/start/auth",
+    "pages/start/webView",
+    "pages/index/index",
+    "pages/index/teamactivite",
+    "pages/index/hold",
+    "pages/index/holdapply",
+    "pages/index/selectMatch",
+    "pages/index/matchList",
+    "pages/index/matchDetail",
+    "pages/index/activityList",
+    "pages/index/sureOrder",
+    "pages/index/addMyInfo",
+    "pages/index/selectSingle",
+    "pages/index/supportList",
+    "pages/index/rangeLists",
+    "pages/index/supportHe",
+    "pages/find/find",
+    "pages/find/addfind",
+    "pages/find/articleDetail",
+    "pages/mine/mine",
+    "pages/mine/infomation",
+    "pages/mine/partners",
+    "pages/mine/contacts",
+    "pages/mine/addContact",
+    "pages/mine/phone",
+    "pages/mine/phoneblind",
+    "pages/mine/manualservice",
+    "pages/mine/matcheds",
+    "pages/mine/records",
+    "pages/mine/tripinfo",
+    "pages/mine/insuranceinfo",
+    "pages/mine/mysupport",
+    "pages/mine/myPayOrderList",
+    "pages/fund/fund",
+    "pages/fund/selfsupport",
+    "pages/fund/myInfo",
+    "pages/fund/fundDetail",
+    "pages/fund/fundShared",
+    "pages/fund/selectFriends",
+    "pages/fund/addCard"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "践行者",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#979797",
+    "selectedColor": "#3478FF",
+    "borderStyle": "white",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "selectedIconPath": "images/tabbar1_seled.png",
+        "iconPath": "images/tabbar1.png",
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "selectedIconPath": "images/tabbar2_seled.png",
+        "iconPath": "images/tabbar2.png",
+        "pagePath": "pages/find/find",
+        "text": "互动"
+      },
+      {
+        "selectedIconPath": "images/tabbar3_seled.png",
+        "iconPath": "images/tabbar3.png",
+        "pagePath": "pages/fund/fund",
+        "text": "众筹"
+      },
+      {
+        "selectedIconPath": "images/tabbar4_seled.png",
+        "iconPath": "images/tabbar4.png",
+        "pagePath": "pages/mine/mine",
+        "text": "我的"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

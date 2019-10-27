@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "i-icon": "../../frames/iview/icon/index"
+  },
+  "navigationBarBackgroundColor": "#ffffff",
+  "navigationBarTextStyle": "black",
+  "navigationBarTitleText": "发布",
+  "backgroundColor": "#eeeeee",
+  "backgroundTextStyle": "light"
+}

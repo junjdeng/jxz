@@ -1,0 +1,13 @@
+{
+  "usingComponents": {
+    "i-tabs": "../../frames/iview/tabs/index",
+    "i-tab": "../../frames/iview/tab/index",
+    "i-icon": "../../frames/iview/icon/index",
+    "i-progress": "../../frames/iview/progress/index"
+  },
+  "navigationBarBackgroundColor": "#ffffff",
+  "navigationBarTextStyle": "black",
+  "navigationBarTitleText": "众筹详情分享",
+  "backgroundColor": "#eeeeee",
+  "backgroundTextStyle": "light"
+}

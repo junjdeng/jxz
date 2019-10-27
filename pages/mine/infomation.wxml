@@ -1,0 +1,54 @@
+<view class='container'>
+  <form bindsubmit="formSubmit" class='info_form'>
+    <view class="section section_gap flex-between">
+      <view class="section__title flex5">头像</view>
+      <view class='flex2'>
+        <image class='cover' src='{{selected_img}}' bindtap='selectImg'></image>
+        <input name="header_img" value='{{cover}}' hidden='true'></input>
+      </view>
+    </view>
+       <view class="section section_gap flex-between">
+      <view class="section__title flex2">姓名</view>
+      <input class='flex5' name="name" value='{{name}}'  placeholder="请输入姓名" />
+    </view>
+    <view class="section section_gap flex-between">
+      <view class="section__title flex2">出生日期</view>
+      <view class='flex1'>
+        <picker class='date_picker' name="birthday" mode="date" value="{{birthday}}" bindchange="bindDateChange">
+          <view class="picker">
+            {{birthday}}
+          </view>
+        </picker>
+      </view>
+    </view>
+    <view class="section section_gap flex-between">
+      <view class="section__title flex2">性别</view>
+      <view class='flex5'>
+        <radio-group name="sex" class="radio-group" bindchange="radioChange">
+          男
+          <radio value="1" checked="{{sex == 1 ? true : false}}" /> 女
+          <radio value="2" checked="{{sex == 2 ? true : false}}" />
+        </radio-group>
+      </view>
+    </view>
+    <view class="section section_gap flex-between">
+      <view class="section__title flex2">地区</view>
+      <view class='flex5'>
+        <picker class='region_picker' mode="region" bindchange="bindRegionChange" value="{{area}}" name="area">
+          <view class="picker">
+            {{area[0]}}-{{area[1]}}-{{area[2]}}
+          </view>
+        </picker>
+      </view>
+    </view>
+    <view class="section section_gap">
+      <view class="section__title" style='padding-top:10rpx;'>个人介绍</view>
+      <view>
+        <textarea name="note" value='{{note}}' placeholder='给自己写句加油的话吧~'></textarea>
+      </view>
+    </view>
+    <view class="actions">
+      <button form-type="submit">确认提交</button>
+    </view>
+  </form>
+</view>

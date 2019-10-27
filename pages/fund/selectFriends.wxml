@@ -1,0 +1,18 @@
+<view class="container">
+  <checkbox-group bindchange="checkboxChange">
+    <view class="checkbox flex-start" wx:for="{{list}}" wx:key="key">
+      <view class='flex1'>
+        <image src='{{item.cover_url}}'></image>
+      </view>
+      <view class='flex3'>
+       {{item.name}}
+      </view>
+      <view class='flex1' style='text-align: right;'>
+        <checkbox value="{{item.id}}" checked="{{item.checked}}" />
+      </view>
+    </view>
+  </checkbox-group>
+  <view class="actions">
+    <button bindtap='sureClick'>确认选择</button>
+  </view>
+</view>

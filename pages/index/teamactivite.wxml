@@ -1,0 +1,15 @@
+<!--pages/index/teamactivite.wxml-->
+<view class='container'>
+  <!-- <view class='header'>
+    <view class='title'>前半生，践行者踏破铁鞋无觅处，走出最强的团队！</view>
+    <view class='time'>
+      <span>践行者</span>2019-03-03
+    </view>
+  </view>
+
+  <view class='content'>
+
+  
+  </view> -->
+  <web-view src="{{group_url}}"></web-view>
+</view>

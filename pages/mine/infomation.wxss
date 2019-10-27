@@ -1,0 +1,12 @@
+/* pages/mine/infomation.wxss */
+page{background: #f5f5f5;}
+.info_form{margin: 20rpx; width: 710rpx;}
+.section{height: 120rpx; margin-top: 10rpx; padding: 0 10px; background: #fff; color: #302C3D; font-size: 32rpx;}
+.section input{text-align: right; color: #302C3D; font-size: 32rpx;}
+.section .infoicon{text-align: center;}
+.info_form image{width: 80rpx; height: 80rpx; background: gray; border-radius: 50%;float:right;}
+.info_form radio-group{float: right;}
+.info_form picker{float: right;}
+.actions{margin-top: 150rpx; }
+.actions button{background: #00B9FF; color:#fff;}
+textarea{width:100%;background:#fff;padding:20rpx;left:-20rpx;height: 100rpx;}

@@ -1,0 +1,19 @@
+<!--pages/mine/phoneblind.wxml-->
+<view class="container">
+  <form bindsubmit="formSubmit"  class='phoneform'>
+    <view class='tips'>为了数据安全，请您绑定手机号</view>
+    <view class="section section_gap">
+      <input  placeholder="中国大陆" disabled='ture'  />
+      <input value="{{phone}}" type="number" bindinput="phoneChange" maxlength="11"    placeholder="请输入手机号码" />
+      <view class='input_wrap flex-between'>
+       <input class='flex3' value="{{cerCode}}" type="number" bindinput="cerCodeChange"    placeholder="验证码" />
+       <span class="code flex2" catchtap='sendCode'>{{sendTips}}</span>
+      </view>
+      <span class="coun">+86></span>
+    </view>
+  </form>
+  <view class="actions">
+    <button catchtap='sureBlind'>确认绑定</button>
+    <view class='error' data-url='/pages/mine/manualservice' catchtap='navTo'>无法绑定成功？</view>
+  </view>
+</view>

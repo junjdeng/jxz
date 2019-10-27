@@ -1,0 +1,12 @@
+<!--pages/find/addfind.wxml-->
+<view class='container'>
+  <form  class='add_form'>
+    <textarea placeholder="请输入您要发布的内"  bindinput="textareaBlur" placeholder-style="color:#979797;"/>
+    <image mode='aspectFit' bindtap='selectImg'  wx:if='{{showImg}}' src='{{selected_img}}'></image>
+    <view class='takeImg' bindtap='selectImg'>选择照片<i-icon type="camera_fill" size="26" color="#3478FF" /></view>
+  </form>
+
+  <view class="actions">
+    <button class='active' bindtap="formSubmit">发布</button>
+  </view>
+</view>

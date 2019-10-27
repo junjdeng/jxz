@@ -1,0 +1,5 @@
+<!--pages/start/start.wxml-->
+<view class='start' style='background-image:url("../../images/start.png")'></view>
+
+
+
